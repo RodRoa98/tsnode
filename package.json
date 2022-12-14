@@ -8,7 +8,7 @@
     "start": "cd dist && env NODE_ENV=production node ./src/index.js",
     "dev": "nps dev",
     "build": "nps build",
-    "test": "npm start test",
+    "test": "nps test",
     "clean": "npm start clean",
     "release": "npm start release"
   },

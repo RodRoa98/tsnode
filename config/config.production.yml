@@ -2,6 +2,36 @@ default:
   service:
     name: sr-nodejs
     port: 4000
-    jwt: 
+    databases:
+      main:
+        dialect: mongodb
+        host: mongodb+srv://@devroa.gofhu.mongodb.net/test
+        port: 27017
+        dbName: users
+        user: roasg
+        password: 9OmH981UGQLrhmx4
+    jwt:
+      client_id: groa_service_client_id
+      encryption: "cbc9f912893fb24f4039a2d38e40c1dbb6f1de50a7f2f5b567eb0c066fe26685d489d80257b91e6375d2bfb60b8da112+@hWEC9U5-avN?J2gnxsQZyjc+U=e9kK+795LuD$46R"
+      expiration: 1h
+      refresh_token:
+        expiration: 30d
+        encryption: "9998599fd372addfab3520f801cd69b3f871ef8273439a659e8eade913c0c2699bda635c90eb2caa4c48cee1a34bdc01"
+    auth:
+      salt: "Xil4*(b.P;lBS3{E-@?XWKnW@dr)]lU"
+    mail: 
+      host: smtp.gmail.com
+      name: ROASG ©
+      user: rooaasg@gmail.com
+      pass: aliiwpjthijnhbos
+      port: 587
+      cc: []
+      replyToMail: noreply@ghcdsistemas.com
+      replyToName: no-reply
   metadata:
-    enviroment: production
+    enviroment: local
+    cookie:
+      domain: ''
+      sameSite: false
+      httpOnly: false
+      secure: false

@@ -2,6 +2,7 @@ export interface IDefault {
   service: {
     name: string;
     port: number;
+    basePath: string;
     databases: {
       main: {
         dialect: string;
@@ -12,7 +13,18 @@ export interface IDefault {
         password: string;
       };
     };
-    jwt: {};
+    jwt: {
+      client_id: string;
+      encryption: string;
+      expiration: string;
+      refresh_token: {
+        expiration: string;
+        encryption: string;
+      };
+    };
+    auth: {
+      salt: string;
+    };
     mail: {
       host: string;
       name: string;
